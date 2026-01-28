@@ -40,8 +40,6 @@ A retail company wants to better understand customer shopping behavior in order 
 - **Purchase details:** item, category, price, season, size, color  
 - **Behavioral metrics:** discounts, promo usage, previous purchases, purchase frequency, review ratings, shipping type  
 
-### Missing Data
-- 37 missing values in the `review_rating` column  
 
 ---
 
