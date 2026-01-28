@@ -1,51 +1,63 @@
-Customer Shopping Behavior Analysis (SQL, Python, Power BI)
-Project Overview
-
-This project simulates a corporate-grade, end-to-end data analytics workflow focused on understanding customer shopping behavior in a retail environment. The objective is to demonstrate how raw transactional data can be transformed into meaningful business insights that support strategic decision-making.
-
-The analysis covers customer demographics, purchasing patterns, loyalty behavior, and revenue drivers using Python for data preparation, SQL for analysis, and Power BI for visualization.
-
-Business Problem
-
-A retail company wants to better understand how customers interact with its products and services in order to improve sales performance, customer engagement, and long-term loyalty. Management has observed variations in purchasing behavior across demographics, product categories, and purchasing conditions such as discounts, seasons, and subscription status.
+# Customer Shopping Behavior Analysis (Python, SQL, PowerBI)
+---
+## Project Overview
+This project simulates a corporate-grade, end-to-end data analytics workflow for a retail business. The objective is to transform raw customer transaction data into actionable business insights that support strategic decision-making.
+The analysis focuses on understanding customer segments, purchase drivers, loyalty patterns, and revenue trends using Python, SQL, and Power BI.
+---
+## Business Problem
+A retail company wants to better understand customer shopping behavior in order to:
+-Improve sales performance
+-Increase customer engagement and loyalty
+-Optimize marketing and product strategies
+-Key areas of interest include:
+-Demographics and customer segments
+-Product categories and purchasing trends
+-Discounts, subscriptions, and repeat purchases
+-Revenue contribution across different customer groups
 
 The core business question addressed in this project is:
-How can consumer shopping data be leveraged to identify trends, improve customer engagement, and optimize marketing and product strategies?
+How can the company leverage consumer shopping data to identify trends, improve customer engagement, and optimize marketing and product strategies?
+---
+## Dataset Overview
+The dataset contains 3,900 transaction records with 18 columns.
 
-Dataset Description
+Key Features:
+-Customer demographics: age, gender, location, subscription status
+-Purchase details: item, category, price, season, size, color
+-Behavioral metrics: discounts, promo usage, previous purchases, purchase frequency, review ratings, shipping type
+---
+## Tools and Technologies
+-Python (pandas, NumPy) was used for data cleaning, transformation, and feature engineering.
+-PostgreSQL was used to perform SQL-based business analysis.
+-Power BI was used to build an interactive dashboard and visualize insights.
+-Jupyter Notebook was used for the analysis workflow.
+-GitHub was used for version control and project documentation.
+---
+## Project Workflow
+# Data Preparation and Exploratory Analysis (Python)
+The dataset was loaded and explored using pandas. Column names were standardized for consistency and readability. Missing values in the review_rating column were handled using median imputation at the category level.
+New features were created, including age_group (Young Adult, Adult, Middle-aged, Senior) and purchase_frequency_days derived from purchase frequency categories. Data consistency checks were performed, redundant columns were removed, and the final cleaned dataset was prepared for SQL analysis.
 
-The dataset contains 3,900 customer purchase records with 18 features, including customer demographics, product details, transaction values, subscription status, discount usage, purchase frequency, and review ratings. Minor missing values were present in the review rating field and were handled during preprocessing.
+# Data Analysis (SQL)
+The cleaned dataset was loaded into PostgreSQL to simulate real-world business analysis. SQL queries were written to answer business-driven questions such as revenue comparison by gender, identification of high-spending customers who used discounts, top products by average review rating, purchase behavior by shipping type, spending patterns of subscribers versus non-subscribers, discount dependency by product, customer segmentation into New, Returning, and Loyal groups, top products within each category, the relationship between repeat purchases and subscriptions, and revenue contribution by age group.
 
-Tools and Technologies
+# Visualization and Dashboard (Power BI)
+An interactive Power BI dashboard was developed to present insights clearly to stakeholders. The dashboard includes total customers and average purchase value, revenue by product category, subscription versus non-subscription split, sales and revenue by age group, and interactive filters for category, shipping type, and subscription status.
+---
+## Key Insights
+-Subscribers generate higher long-term value despite similar average purchase amounts
+-Loyal customers form the largest segment, highlighting retention opportunities
+-Certain products rely heavily on discounts, impacting margins
+-Middle-aged and young adult customers contribute the most revenue
+-Express shipping customers tend to spend slightly more per purchase
+---
+## Business Recommendations
+-Promote subscription benefits to increase long-term revenue
+-Introduce loyalty programs for high-repeat customers
+-Optimize discount strategies to protect margins
+-Highlight top-rated and high-performing products in marketing campaigns
+-Focus marketing efforts on high-revenue customer segments
 
-Python (pandas, NumPy) was used for data cleaning, transformation, and feature engineering.
-PostgreSQL was used to perform SQL-based business analysis.
-Power BI was used to create an interactive dashboard for stakeholder reporting.
-Jupyter Notebook and GitHub were used for analysis workflow and project documentation.
 
-Data Preparation and Exploratory Analysis (Python)
-
-The raw dataset was cleaned and standardized by renaming columns, handling missing values, and validating data consistency. New analytical features were created, including customer age groups and purchase frequency in days. Redundant fields were removed, and the final dataset was prepared for SQL-based analysis.
-
-Data Analysis (SQL)
-
-The cleaned dataset was loaded into PostgreSQL to simulate real-world analytical queries. SQL was used to analyze revenue distribution, customer spending behavior, discount effectiveness, subscription impact, customer loyalty segmentation, product performance, and demographic-based revenue contribution. Queries were written with a business-driven approach to reflect how analysts work in production environments.
-
-Visualization and Insights (Power BI)
-
-An interactive Power BI dashboard was developed to communicate insights clearly and effectively. The dashboard includes key performance indicators such as total customers, revenue by category, subscription split, spending by age group, and filters for product category, shipping type, and subscription status. The dashboard enables stakeholders to explore patterns and make data-driven decisions.
-
-Key Insights
-
-Subscribed customers contribute higher long-term revenue compared to non-subscribers.
-Repeat and loyal customers form a significant portion of total revenue.
-Certain products rely heavily on discounts, which may impact profitability.
-Middle-aged and young adult customers are the highest revenue-generating segments.
-Customers opting for faster shipping tend to spend slightly more per transaction.
-
-Business Recommendations
-
-Strengthen subscription and loyalty programs to improve retention and lifetime value.
-Optimize discount strategies to balance customer acquisition and profit margins.
-Focus marketing efforts on high-revenue customer segments and top-performing products.
-Use product ratings and purchase behavior to guide inventory and promotional decisions.
+Jupyter Notebook was used for the analysis workflow.
+GitHub was used for version control and project documentation.
